@@ -29,26 +29,26 @@ echo "<div class='right-button-margin'>";
     echo "</a>";
 echo "</div>";
   // HTML table for displaying a product details
-echo "<table class='table table-hover table-responsive table-bordered'>";
+echo "<table class='table table-hover table-responsive tbl'>";
   
     echo "<tr>";
-        echo "<td>Name</td>";
-        echo "<td>{$product->name}</td>";
+        echo "<td class='obRight'>Name</td>";
+        echo "<td class='obLeft'>{$product->name}</td>";
     echo "</tr>";
   
     echo "<tr>";
-        echo "<td>Price</td>";
-        echo "<td>{$product->price}</td>";
+        echo "<td class='obRight'>Price</td>";
+        echo "<td class='obLeft'>{$product->price}</td>";
     echo "</tr>";
   
     echo "<tr>";
-        echo "<td>Description</td>";
-        echo "<td>{$product->description}</td>";
+        echo "<td class='obRight'>Description</td>";
+        echo "<td class='obLeft'>{$product->description}</td>";
     echo "</tr>";
   
     echo "<tr>";
-        echo "<td>Category</td>";
-        echo "<td>";
+        echo "<td class='obRight'>Category</td>";
+        echo "<td class='obLeft'>";
             // display category name
             $category->id=$product->category_id;
             $category->readName();

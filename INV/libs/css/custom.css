@@ -75,11 +75,21 @@ a:hover{
 .items:hover{
     background-color: #37393A !important;
     color: #ECEAE9;
-    font-size: 17px;
+    font-size: 17.4px;
+    border-radius: 10px 0 10px 10px;
 }
 
 .btn-danger{
     background-color: #FF6B6C !important;
+}
+
+.btn-primary{
+    background-color: #5B6886 !important;
+    border: 0;
+}
+
+.btn-primary:hover{
+    background-color: #FAA916 !important;
 }
 
 td{
@@ -103,7 +113,7 @@ td{
 }
 
 .pagehead{
-    color: #e7e7e7 ;
+    color: #f1efef ;
     margin: 3rem 0 2rem;
     width: 500px;
 }
@@ -131,3 +141,90 @@ td{
     
 }
 
+.tbl{
+    background-color: #ECEAE9 !important;
+    border: 0;
+    font-size: 1.8rem;
+}
+
+.tbl tr{
+    padding: 10px;
+}
+
+.obRight{
+    border-right: 1px solid black;
+    width: 14rem;
+}
+
+.obLeft{
+    padding: 08px 0 08px 10px !important;
+}
+
+/* style edit */
+
+.tblEd{
+    background-color: #ECEAE9 !important;
+    border: none;
+    font-size: 1.8rem;
+    border-radius: 10px 10px 10px 10px ;
+    padding: 10px 3px 2px;
+    width: 70%;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    display: flex;
+    margin: 1% 10%;
+}
+
+.tblEd tr:hover{
+    background-color: #37393A !important;
+    color: #ECEAE9;
+    font-size: 17.4px;
+}
+
+.upLeft{
+    width: 15rem;
+    font-size: 1.5rem;
+}
+
+.upRight{
+    border-left: 1px solid rgba(0, 0, 0, 0.205);
+    color: #000;
+}
+
+#upName input{
+    width: 60rem;
+}
+
+#upPrice{
+    display: flex;
+}
+
+#upPrice p{
+    padding: 0 9px;
+}
+
+#upDesc textarea{
+    width: 60rem;
+    height: 15rem;
+    resize: vertical;
+}
+.container{
+    justify-content: center;
+}
+
+.btnsUp{
+    align-items: center;
+    text-align: center;
+    margin-left: 40% !important;
+    display: flex;
+}
+
+.btnUp{
+    font-size: 1.52rem;
+    padding: 10px 10px;
+}
+
+.btnsUp button{
+    margin: 0 10px 0 0;
+}
