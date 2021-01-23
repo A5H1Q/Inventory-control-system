@@ -19,7 +19,7 @@ $db = $database->getConnection();
 $product = new Product($db);
 $category = new Category($db);
   
-$page_title = "Current Stock";
+$page_title = "Current in Stock";
 include_once "layout_header.php";
   
 // query products

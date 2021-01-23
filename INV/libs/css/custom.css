@@ -58,6 +58,9 @@ a:hover{
     /* padding: 2rem 1rem; */
     font-weight: lighter;
 }
+.no-hover{
+    border-top: 0;
+}
 
 .no-hover:hover{
     color: inherit !important;
@@ -100,15 +103,31 @@ td{
 }
 
 .pagehead{
-    color: #f2f2f2 ;
-    margin: 3rem 0;
+    color: #e7e7e7 ;
+    margin: 3rem 0 2rem;
+    width: 500px;
 }
 
 .table{
     box-shadow: 0 0px 10px 0.1px rgba(0, 0, 0, 0.19);
+    border-radius: 10px 0 10px 10px;
 }
 
-.headDiv{
-    display: flex;
     /* total rows should be on the right */
+.headDiv{
+    width: 100%;
+    /* display: ; */
 }
+
+
+.totalC{
+    margin: 0 0 0em 0em;
+    background-color: #ECEAE9;
+    position: relative;
+    float: right;
+    border-radius: 10px 10px 0 0 ;
+    padding: 3px 3px 2px;
+    box-shadow: 0 -2px 5px 0.1px rgba(0, 0, 0, 0.19);
+    
+}
+

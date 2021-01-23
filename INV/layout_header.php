@@ -54,6 +54,8 @@
         echo "<div class='pagehead'>
                 <h2>{$page_title}</h2>
             </div>";
-        echo    "<div class='totalC'> $total_rows </div>";
+            if(basename($_SERVER['PHP_SELF'])== 'index.php'){
+                echo    "<div class='totalC'> <P> Total number of Items : $total_rows </P></div>";
+            }
         echo "</div>";
         ?>
