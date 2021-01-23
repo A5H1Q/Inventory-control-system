@@ -5,29 +5,29 @@
 if($total_rows>0){
   
     echo "<table class='table table-hover table-responsive tb-e'>";
-        echo "<tr>";
-            echo "<th>Product</th>";
-            echo "<th>Price</th>";
-            echo "<th>Description</th>";
-            echo "<th>Category</th>";
-            echo "<th>Actions</th>";
+        echo "<tr class='no-hover'>";
+            echo "<th id='t-name'>Product</th>";
+            echo "<th id='t-price'>Price</th>";
+            echo "<th id='t-desc'>Description</th>";
+            echo "<th id='t-cat'>Category</th>";
+            echo "<th id='t-act'>Actions</th>";
         echo "</tr>";
   
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
   
             extract($row);
   
-            echo "<tr> ";
-                echo "<td>{$name}</td>";
-                echo "<td>{$price}</td>";
-                echo "<td>{$description}</td>";
-                echo "<td>";
+            echo "<tr class = 'items'>";
+                echo "<td id='t-name'>{$name}</td>";
+                echo "<td id='t-price'>{$price}</td>";
+                echo "<td id='t-desc'>{$description}</td>";
+                echo "<td id='t-cat'>";
                     $category->id = $category_id;
                     $category->readName();
                     echo $category->name;
                 echo "</td>";
   
-                echo "<td>";
+                echo "<td id='t-act'>";
   
                     // read product button
                     echo "<a href='read_one.php?id={$id}' class='btn btn-primary left-margin'>";

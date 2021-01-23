@@ -21,17 +21,17 @@
     <div id="navbar"><?php if(basename($_SERVER['PHP_SELF']) == "index.php"){
         
         //SEARCH
-        echo "<form role='search' action='search.php'>";
+        echo "<form role='search' action='search.php' class='search-nav'>";
         echo "<div class='input-group col-md-3 pull-left margin-right-1em'>";
                 $search_value=isset($search_term) ? "value='{$search_term}'" : "";
-                echo "<input type='text' class='form-control' placeholder='Type product name or description...' name='s' id='srch-term' required {$search_value} />";
+                echo "<input type='text' class='form-control' placeholder='Type product name or description...' name='s' id='srch-term' autocomplete='off' required {$search_value} />";
                 echo "<div class='input-group-btn'>";
                     echo "<button class='btn btn-primary' type='submit'><i class='glyphicon glyphicon-search'></i></button>";
                 echo "</div>";
             echo "</div>";
         echo "</form>";
 
-        echo "Inventory Management."; //add logo?
+        // echo "<h2 id='main-head' >Inventory Management.</h2>"; //add logo?
 
         //CREATE PRODUCT
         echo "<div class='right-button-margin'>";
@@ -47,8 +47,13 @@
     <div class="container">
   
         <?php
+        $total_rows=$product->countAll();
+
+        echo "<div class='headDiv'>";
         // show page header
         echo "<div class='pagehead'>
-                <h1>{$page_title}</h1>
+                <h2>{$page_title}</h2>
             </div>";
+        echo    "<div class='totalC'> $total_rows </div>";
+        echo "</div>";
         ?>
