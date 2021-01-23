@@ -14,10 +14,6 @@ $category = new Category($db);
 $page_title = "Create Product";
 include_once "layout_header.php";
   
-echo "<div class='right-button-margin'>
-        <a href='index.php' class='btn btn-default pull-right'>Read Products</a>
-    </div>";
-  
 ?>
 
 <?php 
@@ -44,26 +40,26 @@ if($_POST){
 <!-- HTML form for creating a product -->
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
   
-    <table class='table table-hover table-responsive table-bordered'>
+    <table class='table table-hover table-responsive tblEd'>
   
         <tr>
-            <td>Name</td>
-            <td><input type='text' name='name' class='form-control' /></td>
+            <td class='upLeft'>Name</td>
+            <td class='upRight' id='upName'><input type='text' name='name' class='form-control' /></td>
         </tr>
   
         <tr>
-            <td>Price</td>
-            <td><input type='text' name='price' class='form-control' /></td>
+            <td class='upLeft'>Price</td>
+            <td class='upRight' id='upPrice'><input type='text' name='price' class='form-control' /></td>
         </tr>
   
         <tr>
-            <td>Description</td>
-            <td><textarea name='description' class='form-control'></textarea></td>
+            <td class='upLeft'>Description</td>
+            <td class='upRight' id='upDesc'><textarea name='description' class='form-control'></textarea></td>
         </tr>
   
         <tr>
-            <td>Category</td>
-            <td>
+            <td class='upLeft'>Category</td>
+            <td class='upRight' id='upCat'>
 
 
        <?php
@@ -83,15 +79,12 @@ echo "</select>";
 ?>
             </td>
         </tr>
-  
-        <tr>
-            <td></td>
-            <td>
-                <button type="submit" class="btn btn-primary">Create</button>
-            </td>
-        </tr>
-  
+
     </table>
+    <div class="btnsUp">
+        <button type="submit" class="btn btn-primary btnUp">Create</button> 
+        <a href="index.php" class='btn btn-default btnUp'>Cancel</a>
+    </div>
 </form>
 <!-- 'create product' html form will be here -->
 
