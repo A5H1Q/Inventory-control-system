@@ -1,0 +1,2 @@
+hight contrast color?
+copy the wanted color and remove bootstrap

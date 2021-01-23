@@ -96,6 +96,8 @@ echo "</select>";
 <!-- 'create product' html form will be here -->
 
 <?php
+// TODO:
+// redirect to home after creating product
   
 // footer
 include_once "layout_footer.php";
