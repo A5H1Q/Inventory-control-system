@@ -52,7 +52,7 @@
         echo "<div class='headDiv'>";
         // show page header
         echo "<div class='pagehead'>
-                <h2>{$page_title}</h2>
+                <h2 id='pgTitle'>{$page_title}</h2>
             </div>";
             if(basename($_SERVER['PHP_SELF'])== 'index.php'){
                 echo    "<div class='totalC'> <P> Total number of Items : $total_rows </P></div>";

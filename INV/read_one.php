@@ -24,9 +24,7 @@ $page_title = "View Details";
 include_once "layout_header.php";
   
 echo "<div class='right-button-margin'>";
-    echo "<a href='index.php' class='btn btn-primary pull-right'>";
-        echo "<span class='glyphicon glyphicon-list'></span> Print";
-    echo "</a>";
+    echo "<button onclick='printDoc()' id='printBtn' class='btn btn-primary pull-right'> <span class='glyphicon glyphicon-list'></span> Print </button>" ;
 echo "</div>";
   // HTML table for displaying a product details
 echo "<table class='table table-hover table-responsive tbl'>";
@@ -60,3 +58,19 @@ echo "</table>";
 // set footer
 include_once "layout_footer.php";
 ?>
+
+<script>
+    
+    var rstrPage = document.body.innerHTML; // Whole body
+    var nav = document.getElementById('navbar');
+    var headTxt = document.getElementById('pgTitle');
+    var printBtn = document.getElementById('printBtn');
+
+    function printDoc() { 
+    nav.style.display = 'none';
+    printBtn.style.display = 'none';
+    headTxt.innerText = "Inventory management ";
+    window.print();    
+    document.body.innerHTML = rstrPage;
+     }
+</script>

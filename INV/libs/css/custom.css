@@ -228,3 +228,11 @@ td{
 .btnsUp button{
     margin: 0 10px 0 0;
 }
+
+#printBtn{
+    display: inherit;
+}
+
+.pagination{
+    margin: 1px 0 !important;
+}
